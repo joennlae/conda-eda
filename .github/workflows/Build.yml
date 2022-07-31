@@ -762,6 +762,16 @@ jobs:
       - uses: ./ci
 
   #68
+  openroad-gui-linux:
+    runs-on: "ubuntu-20.04"
+    env:
+      PACKAGE: "pnr/openroad-gui"
+      OS_NAME: "linux"
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./ci
+
+  #69
   xls-linux:
     # uses older ubuntu for better compat:
     # https://github.com/hdl/conda-eda/issues/199
