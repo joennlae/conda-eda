@@ -24,6 +24,7 @@ jobs:
     env:
       PACKAGE: "misc/magic"
       OS_NAME: "linux"
+      SKIP: "true"
     steps:
       - uses: actions/checkout@v3
       - name: 'Install csh'
@@ -38,6 +39,7 @@ jobs:
     env:
       PACKAGE: "bit/icestorm"
       OS_NAME: "linux"
+      SKIP: "true"
     steps:
       - uses: actions/checkout@v3
       - uses: ./ci
@@ -48,6 +50,7 @@ jobs:
     env:
       PACKAGE: "bit/prjtrellis"
       OS_NAME: "linux"
+      SKIP: "true"
     steps:
       - uses: actions/checkout@v3
       - uses: ./ci
@@ -58,6 +61,7 @@ jobs:
     env:
       PACKAGE: "bit/prjoxide"
       OS_NAME: "linux"
+      SKIP: "true"
     steps:
       - uses: actions/checkout@v3
       - uses: ./ci
@@ -68,6 +72,7 @@ jobs:
     env:
       PACKAGE: "bit/prjxray-db"
       OS_NAME: "linux"
+      SKIP: "true"
     steps:
       - uses: actions/checkout@v3
       - uses: ./ci
@@ -78,6 +83,7 @@ jobs:
     env:
       PACKAGE: "bit/prjxray-tools"
       OS_NAME: "linux"
+      SKIP: "true"
     steps:
       - uses: actions/checkout@v3
       - uses: ./ci
@@ -88,6 +94,7 @@ jobs:
     env:
       PACKAGE: "sim/icarus"
       OS_NAME: "linux"
+      SKIP: "true"
     steps:
       - uses: actions/checkout@v3
       - uses: ./ci
@@ -131,6 +138,7 @@ jobs:
     env:
       PACKAGE: "syn/yosys-plugins-symbiflow"
       OS_NAME: "linux"
+      SKIP: "true"
     steps:
       - uses: actions/checkout@v3
       - uses: ./ci
@@ -142,6 +150,7 @@ jobs:
     env:
       PACKAGE: "pnr/nextpnr/nexus"
       OS_NAME: "linux"
+      SKIP: "true"
     steps:
       - uses: actions/checkout@v3
       - uses: ./ci
@@ -153,6 +162,7 @@ jobs:
     env:
       PACKAGE: "syn/symbiflow-yosys-plugins"
       OS_NAME: "linux"
+      SKIP: "true"
     steps:
       - uses: actions/checkout@v3
       - uses: ./ci
@@ -163,6 +173,7 @@ jobs:
     env:
       PACKAGE: "pnr/vtr"
       OS_NAME: "linux"
+      SKIP: "true"
     steps:
       - uses: actions/checkout@v3
       - uses: ./ci
@@ -173,6 +184,7 @@ jobs:
     env:
       PACKAGE: "pnr/vtr-gui"
       OS_NAME: "linux"
+      SKIP: "true"
     steps:
       - uses: actions/checkout@v3
       - uses: ./ci
@@ -183,6 +195,7 @@ jobs:
     env:
       PACKAGE: "pnr/vtr-optimized"
       OS_NAME: "linux"
+      SKIP: "true"
     steps:
       - uses: actions/checkout@v3
       - uses: ./ci
@@ -194,6 +207,7 @@ jobs:
     env:
       PACKAGE: "pnr/quicklogic-vtr"
       OS_NAME: "linux"
+      SKIP: "true"
     steps:
       # Skip if token isn't available (cross-repository PRs mainly)
       - run: if [ "$ANACONDA_TOKEN" = "" ]; then echo "SKIP=true" >>$GITHUB_ENV; fi
@@ -207,6 +221,7 @@ jobs:
     env:
       PACKAGE: "pnr/quicklogic-vtr-gui"
       OS_NAME: "linux"
+      SKIP: "true"
     steps:
       # Skip if token isn't available (cross-repository PRs mainly)
       - run: if [ "$ANACONDA_TOKEN" = "" ]; then echo "SKIP=true" >>$GITHUB_ENV; fi
@@ -220,6 +235,7 @@ jobs:
     env:
       PACKAGE: "pnr/nextpnr/ice40"
       OS_NAME: "linux"
+      SKIP: "true"
     steps:
       - uses: actions/checkout@v3
       - uses: ./ci
@@ -231,6 +247,7 @@ jobs:
     env:
       PACKAGE: "pnr/nextpnr/ecp5"
       OS_NAME: "linux"
+      SKIP: "true"
     steps:
       - uses: actions/checkout@v3
       - uses: ./ci
@@ -241,6 +258,7 @@ jobs:
     env:
       PACKAGE: "pnr/nextpnr/generic"
       OS_NAME: "linux"
+      SKIP: "true"
     steps:
       - uses: actions/checkout@v3
       - uses: ./ci
@@ -269,6 +287,7 @@ jobs:
     env:
       PACKAGE: "pnr/nextpnr/fpga_interchange"
       OS_NAME: "linux"
+      SKIP: "true"
     steps:
       - uses: actions/checkout@v3
       - uses: ./ci
@@ -307,6 +326,7 @@ jobs:
       OS_NAME: "linux"
       VERSIONS: ${{ format('{0}{1}', github.workspace, '/xilinx/vivado/versions') }}
       SCRIPT: ${{ format('{0}{1}', github.workspace, '/xilinx/vivado/gen_metapackages.sh') }}
+      SKIP: "true"
     steps:
       - uses: actions/checkout@v3
       - uses: ./ci
@@ -317,6 +337,7 @@ jobs:
     env:
       PACKAGE: "bit/icestorm"
       OS_NAME: "osx"
+      SKIP: "true"
     steps:
       - uses: actions/checkout@v3
       - uses: ./ci
@@ -327,6 +348,7 @@ jobs:
     env:
       PACKAGE: "bit/prjtrellis"
       OS_NAME: "osx"
+      SKIP: "true"
     steps:
       - uses: actions/checkout@v3
       - uses: ./ci
@@ -337,6 +359,7 @@ jobs:
     env:
       PACKAGE: "sim/icarus"
       OS_NAME: "osx"
+      SKIP: "true"
     steps:
       - uses: actions/checkout@v3
       - uses: ./ci
@@ -347,6 +370,7 @@ jobs:
     env:
       PACKAGE: "sim/verilator"
       OS_NAME: "osx"
+      SKIP: "true"
     steps:
       - uses: actions/checkout@v3
       - uses: ./ci
@@ -358,6 +382,7 @@ jobs:
       PACKAGE: "syn/yosys"
       OS_NAME: "osx"
       EXTRA_BUILD_ARGS: "--no-test"
+      SKIP: "true"
     steps:
       - uses: actions/checkout@v3
       - uses: ./ci
@@ -403,6 +428,7 @@ jobs:
     env:
       PACKAGE: "pnr/nextpnr/ice40"
       OS_NAME: "osx"
+      SKIP: "true"
     steps:
       - uses: actions/checkout@v3
       - uses: ./ci
@@ -413,6 +439,7 @@ jobs:
     env:
       PACKAGE: "pnr/nextpnr/generic"
       OS_NAME: "osx"
+      SKIP: "true"
     steps:
       - uses: actions/checkout@v3
       - uses: ./ci
@@ -501,6 +528,7 @@ jobs:
     env:
       PACKAGE: "misc/tree-sitter-verilog"
       OS_NAME: "linux"
+      SKIP: "true"
     steps:
       - uses: actions/checkout@v3
       - uses: ./ci
@@ -523,6 +551,7 @@ jobs:
       PACKAGE: "sv-front/slang"
       OS_NAME: "linux"
       USE_SYSTEM_GCC_VERSION: "9"
+      SKIP: "true"
     steps:
       - uses: actions/checkout@v3
       - uses: ./ci
@@ -533,6 +562,7 @@ jobs:
     env:
       PACKAGE: "sv-front/sv-parser"
       OS_NAME: "linux"
+      SKIP: "true"
     steps:
       - uses: actions/checkout@v3
       - uses: ./ci
@@ -556,6 +586,7 @@ jobs:
       PACKAGE: "sv-front/surelog"
       OS_NAME: "linux"
       PYTHON_VERSION: "3.7"
+      SKIP: "true"
     steps:
       - uses: actions/checkout@v3
       - uses: ./ci
@@ -568,6 +599,7 @@ jobs:
       PACKAGE: "sv-front/surelog"
       OS_NAME: "linux"
       PYTHON_VERSION: "3.8"
+      SKIP: "true"
     steps:
       - uses: actions/checkout@v3
       - uses: ./ci
@@ -581,6 +613,7 @@ jobs:
       USE_SYSTEM_GCC_VERSION: "9"
       OS_NAME: "linux"
       PYTHON_VERSION: "3.7"
+      SKIP: "true"
     steps:
       - uses: actions/checkout@v3
       - uses: ./ci
@@ -594,6 +627,7 @@ jobs:
       USE_SYSTEM_GCC_VERSION: "9"
       OS_NAME: "linux"
       PYTHON_VERSION: "3.8"
+      SKIP: "true"
     steps:
       - uses: actions/checkout@v3
       - uses: ./ci
@@ -673,6 +707,7 @@ jobs:
     env:
       PACKAGE: "misc/netgen"
       OS_NAME: "linux"
+      SKIP: "true"
     steps:
       - uses: actions/checkout@v3
       - uses: ./ci
@@ -694,6 +729,7 @@ jobs:
     env:
       PACKAGE: "misc/open_pdks"
       OS_NAME: "linux"
+      SKIP: "true"
     steps:
       - uses: actions/checkout@v3
       - uses: ./ci
@@ -704,11 +740,21 @@ jobs:
     env:
       PACKAGE: "pnr/openroad"
       OS_NAME: "linux"
+      SKIP: "true"
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./ci
+  #68
+  openroad-gui-linux:
+    runs-on: "ubuntu-20.04"
+    env:
+      PACKAGE: "pnr/openroad-gui"
+      OS_NAME: "linux"
     steps:
       - uses: actions/checkout@v3
       - uses: ./ci
 
-  #63
+  #69
   xls-linux:
     # uses older ubuntu for better compat:
     # https://github.com/hdl/conda-eda/issues/199
