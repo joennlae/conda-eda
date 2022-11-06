@@ -740,7 +740,6 @@ jobs:
     env:
       PACKAGE: "pnr/openroad"
       OS_NAME: "linux"
-      SKIP: "true"
     steps:
       - uses: actions/checkout@v3
       - uses: ./ci
